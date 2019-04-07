@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block main %}
+    {% for article in article_list %}
+        <ul>
+            <li>
+                <a href="{{ article.get_absolute_url }}">{{ article.title }}</a>{{ article.created_time }}{{ article.category.name }}
+            </li>
+        </ul>
+    {% endfor %}
+{% endblock %}
